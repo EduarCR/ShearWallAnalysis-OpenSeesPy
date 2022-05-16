@@ -3,7 +3,7 @@ import numpy as np
 import time
 
 # +-----------------------------------------------------+
-# |          Función para análisis de gravedad          |
+# |             Gravity analysis function               |
 # +-----------------------------------------------------+
 def run_gravity_analysis(steps=10):
     print("==> ... Running Gravity Analysis ...\n")
@@ -21,7 +21,7 @@ def run_gravity_analysis(steps=10):
     ops.loadConst("-time", 0.0)
 
 # +---------------------------------------------------------------------------+
-# |       Función para análisis Pushover controlado por desplazamiento        |
+# |          Function for displacement-controlled pushover analysis           |
 # +---------------------------------------------------------------------------+
 def run_pushover_analysis(ctrlNode, baseNodes, dof, Dincr, max_disp, IOflag=True):
 
@@ -118,7 +118,7 @@ def run_pushover_analysis(ctrlNode, baseNodes, dof, Dincr, max_disp, IOflag=True
     return outputs
 
 # +--------------------------------------------------------------+
-# |      Función para generar protocolo de desplazamiento        |
+# |        Function for generating displacement protocol         |
 # +--------------------------------------------------------------+
 def GeneratePeaks(Dmax,Dincr,CycleType,Fact):
     Disp = 0
@@ -156,7 +156,7 @@ def GeneratePeaks(Dmax,Dincr,CycleType,Fact):
     return dSteps
 
 # +---------------------------------------------------------------------------+
-# |      Función para análisis cíclico cuaciestático por desplazamiento       |
+# |         Function for cyclic quasistatic analysis by displacement          |
 # +---------------------------------------------------------------------------+
 def run_cyclic_analysis(ctrlNode, baseNodes, dof, iDmax, DincrStatic, CycleType, Fact, Ncycles):
 
@@ -262,7 +262,7 @@ def run_cyclic_analysis(ctrlNode, baseNodes, dof, iDmax, DincrStatic, CycleType,
     return outputs
 
 # +---------------------------------------------------------------------------+
-# |      Función para análisis cíclico cuaciestático por desplazamiento       |
+# |         Function for cyclic quasistatic analysis by displacement          |
 # +---------------------------------------------------------------------------+
 def run_cyclic_analysis_txt(dispSteps, ctrlNode, baseNodes, dof, Fact):
 
